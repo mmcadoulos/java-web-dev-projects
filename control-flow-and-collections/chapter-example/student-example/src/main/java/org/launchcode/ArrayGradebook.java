@@ -43,6 +43,18 @@ public class ArrayGradebook {
             sum += grades[i];
         }
 
+//        // for-each loops will print the null spaces in the array
+//        // for-each loop needs an outside counter variable to access the grade
+//        int counter = 0;
+//        for (String student : students){
+//            System.out.println(student + " (" + grades[counter] + ")");
+//            counter++;
+//        }
+
+//        for (String student : students) {
+//            System.out.println(student);
+//        }
+
         double avg = sum / numStudents;
         System.out.println("Average grade: " + avg);
     }
