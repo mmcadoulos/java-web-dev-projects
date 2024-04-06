@@ -22,12 +22,12 @@ public class HashMapPractice {
                 studentInfo.put(studentID, studentName);
                 input.nextLine();
             }
-
         }while(!studentName.isEmpty());
-
+        input.close();
+        System.out.println("\nClass Roster:");
         for (Map.Entry<Integer, String> student : studentInfo.entrySet()){
             System.out.println(student.getValue() + "'s student ID is: " + student.getKey());
-
         }
+        System.out.println("\nTotal number of students: " + studentInfo.size());
     }
 }
