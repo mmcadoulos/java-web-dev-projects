@@ -68,8 +68,7 @@ public class Car {
      *
      * @param miles - the miles to drive
      */
-    public void drive(double miles)
-    {
+    public void drive(double miles) {
         //adjust fuel based on mpg and miles requested to drive
         double maxDistance = this.milesPerGallon * this.gasTankLevel;
         /**the double below uses some syntax called the ternary operator.
@@ -82,6 +81,14 @@ public class Car {
         double gallonsUsed = milesAbleToTravel / this.milesPerGallon;
         this.gasTankLevel = this.gasTankLevel - gallonsUsed;
         this.odometer += milesAbleToTravel;
+    }
+
+    public void addGas(double gas) {
+        if (gasTankLevel + gas > gasTankSize) {
+            throw (new IllegalArgumentException("Can't exceed tank size"));
+        } else {
+            gasTankLevel += gas;
+        }
     }
 
 }
