@@ -86,6 +86,7 @@ public class Car {
     public void addGas(double gas) {
         if (gasTankLevel + gas > gasTankSize) {
             throw (new IllegalArgumentException("Can't exceed tank size"));
+            // if this calls setGasTankLevel(), then we can put the exception thrower into that method and thus both methods will respond to too much gas well with minimal lines
         } else {
             gasTankLevel += gas;
         }
