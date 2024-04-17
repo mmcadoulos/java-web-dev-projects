@@ -1,21 +1,21 @@
 package technology;
 
 public class SmartPhone extends Computer {
-    private int phoneNumber;
-    public SmartPhone (double cpuClock, int ramSize, int diskSpace, int phoneNumber){
+    private String phoneNumber;
+    public SmartPhone (double cpuClock, int ramSize, int diskSpace, String phoneNumber){
         super(cpuClock, ramSize, diskSpace);
         this.phoneNumber = phoneNumber;
     }
 
-    public void makeCall(int phoneNumber){
-        System.out.println("Calling " + phoneNumber);
+    public String makeCall(String phoneNumber){
+        return ("Calling " + phoneNumber);
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 }

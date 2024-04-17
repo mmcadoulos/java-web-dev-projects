@@ -1,6 +1,6 @@
 package technology;
 
-public abstract class Computer {
+public /*abstract*/ class Computer extends AbstractEntity {
     private double cpuClock;
     private int ramSize;
     private int diskSpace;
@@ -13,17 +13,19 @@ public abstract class Computer {
         this.diskSpace = diskSpace;
     }
 
-    public void powerButton() {
+    public Boolean powerButton() {
         if (isOn) {
             this.isOn = false;
         } else {
             this.isOn = true;
         }
+        return this.isOn;
     }
 
     public void runProgram(String programName) {
         this.isRunningProgram = true;
         System.out.println("Running " + programName);
+        // could create a programs running arraylist and methods to close them?
     }
 
 
