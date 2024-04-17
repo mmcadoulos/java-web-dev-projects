@@ -1,10 +1,21 @@
+package org.launchcode;
+
 public class HouseCat extends Cat {
     private String name;
     private String species = "Felis catus";
 
     public HouseCat(String aName, double aWeight) {
         super(aWeight);
-        name = aName;
+        this.name = aName;
+    }
+
+    public HouseCat(String aName) {
+        // super(13); /* would do the same as a no-arg constructor */
+        this.name = aName;
+    }
+
+    public HouseCat(double aWeight) {
+        super(aWeight);
     }
 
     public boolean isSatisfied() {
@@ -17,6 +28,8 @@ public class HouseCat extends Cat {
     }
 
     public String purr() {
-        return "I'm a HouseCat";
+        return "I'm a org.launchcode.HouseCat";
     }
+
+    public Boolean overrideTest(double weight1, double weight2) {return (weight1 != weight2);}
 }

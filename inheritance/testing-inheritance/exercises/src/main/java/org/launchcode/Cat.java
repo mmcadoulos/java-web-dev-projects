@@ -1,14 +1,21 @@
-public class Cat {
+package org.launchcode;
+
+public abstract class Cat {
 
     private boolean tired = false;
     private boolean hungry = false;
     private double weight;
 
     // The biological family for all cat species
-    private String family = "Felidae";
+    // Shouldn't family be a final?
+    private final String family = "Felidae";
 
     public Cat (double aWeight) {
         weight = aWeight;
+    }
+
+    public Cat(){
+        this.weight = 13;
     }
 
     /**** Getters and Setters ****/
@@ -62,5 +69,14 @@ public class Cat {
 
     public String noise () {
         return "Meeeeeeooooowww!";
+    }
+
+    public Boolean overrideTest (double weight1, double weight2){
+        return weight1 == weight2;
+    }
+
+    // Static methods?
+    public static void banana(){
+        System.out.println("cats are strange");
     }
 }
