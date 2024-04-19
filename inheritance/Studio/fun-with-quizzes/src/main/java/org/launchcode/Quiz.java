@@ -7,6 +7,7 @@ public class Quiz {
     private ArrayList<Questions> quizQuestions = new ArrayList<>();
     private int score = 0;
     private int total = 0;
+//    private double grade;
 
 //    public Quiz(ArrayList<Questions> quizQuestions, int score, int total) {
 //        this.quizQuestions = quizQuestions;
@@ -30,9 +31,10 @@ public class Quiz {
         for (Questions question : quizQuestions){
             this.total += question.getPointValue();
             }
-
-
-        System.out.println("Grade: " + score / total * 100);
+//        grade = (double) score /total*100;
+        System.out.println("Score " + score);
+        System.out.println("Total " + total);
+        System.out.println("Grade: " + (double)score / total * 100);
     }
 
     // Getters and Setters
