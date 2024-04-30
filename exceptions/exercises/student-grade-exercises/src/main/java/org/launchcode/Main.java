@@ -28,13 +28,14 @@ public class Main {
         try {
             solution = x / y;
 //                throw new ArithmeticException("Can't divide by zero!");
+            System.out.println(solution);
         } catch (ArithmeticException e) {
             e.printStackTrace();
             System.out.println("ERROR");
             return;
         }
 //        }
-        System.out.println(solution);
+//        System.out.println(solution);
     }
 
     public static int CheckFileExtension(String fileName) {
